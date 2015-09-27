@@ -37,35 +37,35 @@ FlowRouter.route('/b/:id/:slug', {
   },
 });
 
-FlowRouter.route('/b/:boardId/:slug/:cardId', {
-  name: 'card',
-  action(params) {
-    EscapeActions.executeUpTo('inlinedForm');
-
-    Session.set('currentBoard', params.boardId);
-    Session.set('currentCard', params.cardId);
-
-    BlazeLayout.render('defaultLayout', { content: 'board' });
-  },
-});
-
-FlowRouter.route('/shortcuts', {
-  name: 'shortcuts',
-  action() {
-    const shortcutsTemplate = 'keyboardShortcuts';
-
-    EscapeActions.executeUpTo('popup-close');
-
-    if (previousPath) {
-      Modal.open(shortcutsTemplate, {
-        onCloseGoTo: previousPath,
-      });
-    } else {
-      // XXX There is currently no way to escape this page on Sandstorm
-      BlazeLayout.render('defaultLayout', { content: shortcutsTemplate });
-    }
-  },
-});
+// FlowRouter.route('/b/:boardId/:slug/:cardId', {
+//   name: 'card',
+//   action(params) {
+//     EscapeActions.executeUpTo('inlinedForm');
+//
+//     Session.set('currentBoard', params.boardId);
+//     Session.set('currentCard', params.cardId);
+//
+//     BlazeLayout.render('defaultLayout', { content: 'board' });
+//   },
+// });
+//
+// FlowRouter.route('/shortcuts', {
+//   name: 'shortcuts',
+//   action() {
+//     const shortcutsTemplate = 'keyboardShortcuts';
+//
+//     EscapeActions.executeUpTo('popup-close');
+//
+//     if (previousPath) {
+//       Modal.open(shortcutsTemplate, {
+//         onCloseGoTo: previousPath,
+//       });
+//     } else {
+//       // XXX There is currently no way to escape this page on Sandstorm
+//       BlazeLayout.render('defaultLayout', { content: shortcutsTemplate });
+//     }
+//   },
+// });
 
 FlowRouter.notFound = {
   action() {

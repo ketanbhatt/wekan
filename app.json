@@ -1,10 +1,8 @@
 {
-  "name": "Wekan",
-  "description": "The open-source Trello-like kanban",
-  "repository": "https://github.com/wekan/wekan",
-  "logo": "https://raw.githubusercontent.com/wekan/wekan/master/meta/icons/wekan-150.png",
+  "name": "Ezbiz",
+  "description": "Realtime Cloud Based Solution for Small Businesses",
   "keywords": ["productivity", "tool", "team", "kanban"],
-  "website": "http://wekan.io",
+  "website": "http://ketanbhatt.github.io",
   "env": {
     "BUILDPACK_URL": "https://github.com/AdmitHub/meteor-buildpack-horse.git",
     "ROOT_URL": {
